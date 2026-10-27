@@ -15,16 +15,27 @@ export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
+    // Falls die Seite mit /termin aufgerufen wird: saubere Weiterleitung auf Startseite ohne Popup
+    if (window.location.pathname.replace(/\/$/, '') === '/termin') {
+      window.history.replaceState({}, '', '/');
+      setCurrentPath('/');
+    }
+
     const handlePopState = () => {
       setCurrentPath(window.location.pathname);
     };
 
-    // Intercept clicks on links pointing to /impressum or / for instant SPA transition without reload
+    // Intercept clicks on links pointing to /impressum or / or /termin for instant SPA transition without reload
     const handleClick = (e) => {
       const anchor = e.target.closest('a');
       if (!anchor) return;
       const href = anchor.getAttribute('href');
-      if (href === '/impressum' || href === '/') {
+      if (href === '/termin' || href === '/termin/') {
+        e.preventDefault();
+        window.history.replaceState({}, '', '/');
+        setCurrentPath('/');
+        window.scrollTo(0, 0);
+      } else if (href === '/impressum' || href === '/' || href === '/impressum/') {
         e.preventDefault();
         window.history.pushState({}, '', href);
         setCurrentPath(href);
