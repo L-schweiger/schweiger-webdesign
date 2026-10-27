@@ -11,7 +11,7 @@ import ImpressumPage from './components/ImpressumPage';
 export default function App() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const [selectedPackageInfo, setSelectedPackageInfo] = useState('');
-  const [calendlyUrl, setCalendlyUrl] = useState('https://calendly.com/schweiger-webdesign/erstgespraech');
+  const [calendlyUrl, setCalendlyUrl] = useState('https://calendly.com/office-schweiger-webdesign/30min');
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {

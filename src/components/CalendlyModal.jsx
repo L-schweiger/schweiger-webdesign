@@ -3,7 +3,7 @@ import { X, Calendar, Settings, ExternalLink } from 'lucide-react';
 
 export default function CalendlyModal({ isOpen, onClose, selectedPackageInfo, calendlyUrl, setCalendlyUrl }) {
   const [showConfig, setShowConfig] = useState(false);
-  const [tempUrl, setTempUrl] = useState(calendlyUrl || 'https://calendly.com');
+  const [tempUrl, setTempUrl] = useState(calendlyUrl || 'https://calendly.com/office-schweiger-webdesign/30min');
 
   useEffect(() => {
     if (isOpen) {
