@@ -50,13 +50,7 @@ export default function Header({ onOpenCalendly }) {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={() => onOpenCalendly('Mobile Header: Erstgespräch')}
-            className="px-3.5 py-1.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-xs"
-          >
-            Erstgespräch
-          </button>
+        <div className="flex md:hidden items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 text-slate-700 hover:text-brand-600 focus:outline-hidden"
