@@ -79,9 +79,7 @@ export default function App() {
       <CalendlyModal
         isOpen={isCalendlyOpen}
         onClose={() => setIsCalendlyOpen(false)}
-        selectedPackageInfo={selectedPackageInfo}
         calendlyUrl={calendlyUrl}
-        setCalendlyUrl={setCalendlyUrl}
       />
     </div>
   );
