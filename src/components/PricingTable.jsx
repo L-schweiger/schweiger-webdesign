@@ -82,8 +82,11 @@ export default function PricingTable({ onOpenCalendly }) {
               className="mt-5 w-full py-3.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               <Calendar className="w-4 h-4" />
-              <span>Business-Paket anfragen</span>
+              <span>Erstgespräch sichern</span>
             </button>
+            <p className="mt-2 text-center text-[11px] text-slate-500 font-medium">
+              30 Min. unverbindliches Kennenlernen • 100 % kostenlos
+            </p>
 
             {/* Divider */}
             <div className="my-5 border-t border-brand-100" />
@@ -152,8 +155,11 @@ export default function PricingTable({ onOpenCalendly }) {
               className="mt-5 w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               <Calendar className="w-4 h-4" />
-              <span>Start-Paket anfragen (890 €)</span>
+              <span>Erstgespräch sichern</span>
             </button>
+            <p className="mt-2 text-center text-[11px] text-slate-500 font-medium">
+              30 Min. unverbindliches Kennenlernen • 100 % kostenlos
+            </p>
 
             {/* Divider */}
             <div className="my-5 border-t border-slate-100" />
@@ -199,26 +205,26 @@ export default function PricingTable({ onOpenCalendly }) {
                 </span>
               </div>
 
-              {/* Nicht enthaltene Features mit dezentem grauen Strich gekennzeichnet */}
+              {/* Nicht enthaltene Features mit dezentem grauen Strich gekennzeichnet - 1:1 Abgleich zu Business */}
               <div className="pt-2 border-t border-slate-100 space-y-2.5">
                 <div className="flex items-start gap-2.5 text-slate-400">
                   <Minus className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-400 leading-snug">
-                    Mehrere eigenständige Unterseiten (nur 1 Gesamtsite)
+                    <strong className="font-semibold text-slate-500">3 bis 5 Unterseiten:</strong> nur 1 durchscrollbare Gesamtsite
                   </span>
                 </div>
 
                 <div className="flex items-start gap-2.5 text-slate-400">
                   <Minus className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-400 leading-snug">
-                    Einzelseiten-SEO für separate Suchbegriffe
+                    <strong className="font-semibold text-slate-500">Gezielte SEO pro Unterseite:</strong> nur allgemeine Basis-SEO
                   </span>
                 </div>
 
                 <div className="flex items-start gap-2.5 text-slate-400">
                   <Minus className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-400 leading-snug">
-                    Geschäftliche E-Mail-Postfächer / Google-Profil (als Zusatzleistung buchbar)
+                    <strong className="font-semibold text-slate-500">Domain & E-Mail-Setup:</strong> Domain inklusive, E-Mails separat buchbar
                   </span>
                 </div>
               </div>
@@ -277,8 +283,11 @@ export default function PricingTable({ onOpenCalendly }) {
                       className="w-full py-3 px-4 rounded-lg bg-slate-800 hover:bg-slate-900 text-white font-medium text-sm transition-all flex items-center justify-center gap-2 shadow-xs"
                     >
                       <Calendar className="w-4 h-4" />
-                      <span>Starter anfragen (890 €)</span>
+                      <span>Erstgespräch sichern</span>
                     </button>
+                    <p className="mt-2 text-center text-[11px] text-slate-500 font-medium">
+                      30 Min. unverbindliches Kennenlernen • 100 % kostenlos
+                    </p>
                   </td>
                   <td className="py-5 px-6 border-l border-slate-200 bg-brand-50/40">
                     <button
@@ -286,8 +295,11 @@ export default function PricingTable({ onOpenCalendly }) {
                       className="w-full py-3 px-4 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition-all flex items-center justify-center gap-2 shadow-xs"
                     >
                       <Calendar className="w-4 h-4" />
-                      <span>Business anfragen</span>
+                      <span>Erstgespräch sichern</span>
                     </button>
+                    <p className="mt-2 text-center text-[11px] text-slate-500 font-medium">
+                      30 Min. unverbindliches Kennenlernen • 100 % kostenlos
+                    </p>
                   </td>
                 </tr>
               </tbody>

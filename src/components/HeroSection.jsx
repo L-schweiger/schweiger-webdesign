@@ -50,7 +50,7 @@ export default function HeroSection({ onOpenCalendly }) {
           <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed mb-6 sm:mb-8 font-normal max-w-xl">
             Ich baue für Neugründer und kleine Betriebe in Österreich einen modernen Webauftritt,
             mit dem du online perfekt gefunden wirst und dein Angebot überzeugt – unkompliziert,
-            auf Augenhöhe und in nur 10 Tagen online - ab 890 €.
+            auf Augenhöhe und in nur 10 Tagen online - <b>ab 890 €</b>.
           </p>
 
           {/* 3 USPs mit Checkmark */}
@@ -69,14 +69,23 @@ export default function HeroSection({ onOpenCalendly }) {
             </li>
           </ul>
 
-          {/* 2 CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+          {/* CTA & Telefon-Direktlink */}
+          <div className="flex flex-col items-start gap-3">
             <button
               onClick={() => onOpenCalendly('Hero CTA: Gratis Erstgespräch')}
-              className="px-6 sm:px-7 py-3.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm sm:text-base shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm sm:text-base shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center"
             >
               Gratis Erstgespräch vereinbaren
             </button>
+            <p className="text-xs sm:text-sm text-slate-600 pl-0.5">
+              Oder gleich direkt anrufen:{' '}
+              <a
+                href="tel:+436644356834"
+                className="font-semibold text-slate-900 underline hover:text-brand-600 transition-colors"
+              >
+                0664 / 43 56 834
+              </a>
+            </p>
           </div>
 
         </div>
@@ -91,7 +100,7 @@ export default function HeroSection({ onOpenCalendly }) {
           <span className="text-slate-400 select-none">•</span>
           <span>Einmaliger Fixpreis</span>
           <span className="text-slate-400 select-none">•</span>
-          <span>Inklusive Domain &amp; E-Mails</span>
+          <span>Inklusive Wunschdomain (.at)</span>
           <span className="text-slate-400 select-none">•</span>
           <span>WKO-konform &amp; DSGVO-sicher</span>
         </div>
