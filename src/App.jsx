@@ -7,7 +7,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CalendlyModal from './components/CalendlyModal';
 import ImpressumPage from './components/ImpressumPage';
-import { trackEvent, trackPageView } from './utils/analytics';
+import { trackEvent } from './utils/analytics';
 
 export default function App() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -17,12 +17,9 @@ export default function App() {
 
   useEffect(() => {
     // Falls die Seite mit /termin aufgerufen wird (z. B. via QR-Code):
-    // Zuerst für Umami erfassen, dann saubere URL auf Startseite setzen
+    // URL bleibt auf /termin, damit Umami sie nativ als eigene Unterseite trackt
     if (window.location.pathname.replace(/\/$/, '') === '/termin') {
-      trackPageView('/termin');
       trackEvent('qr_termin_scan', { page: '/termin', referrer: document.referrer || 'direct' });
-      window.history.replaceState({}, '', '/');
-      setCurrentPath('/');
     }
 
     const handlePopState = () => {
@@ -36,10 +33,9 @@ export default function App() {
       const href = anchor.getAttribute('href');
       if (href === '/termin' || href === '/termin/') {
         e.preventDefault();
-        trackPageView('/termin');
         trackEvent('click_termin_link');
-        window.history.replaceState({}, '', '/');
-        setCurrentPath('/');
+        window.history.pushState({}, '', href);
+        setCurrentPath(href);
         window.scrollTo(0, 0);
       } else if (href === '/impressum' || href === '/' || href === '/impressum/') {
         e.preventDefault();
