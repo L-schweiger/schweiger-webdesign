@@ -7,6 +7,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CalendlyModal from './components/CalendlyModal';
 import ImpressumPage from './components/ImpressumPage';
+import { trackEvent, trackPageView } from './utils/analytics';
 
 export default function App() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -15,8 +16,11 @@ export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    // Falls die Seite mit /termin aufgerufen wird: saubere Weiterleitung auf Startseite ohne Popup
+    // Falls die Seite mit /termin aufgerufen wird (z. B. via QR-Code):
+    // Zuerst für Umami erfassen, dann saubere URL auf Startseite setzen
     if (window.location.pathname.replace(/\/$/, '') === '/termin') {
+      trackPageView('/termin');
+      trackEvent('qr_termin_scan', { page: '/termin', referrer: document.referrer || 'direct' });
       window.history.replaceState({}, '', '/');
       setCurrentPath('/');
     }
@@ -32,6 +36,8 @@ export default function App() {
       const href = anchor.getAttribute('href');
       if (href === '/termin' || href === '/termin/') {
         e.preventDefault();
+        trackPageView('/termin');
+        trackEvent('click_termin_link');
         window.history.replaceState({}, '', '/');
         setCurrentPath('/');
         window.scrollTo(0, 0);
@@ -53,6 +59,7 @@ export default function App() {
   }, []);
 
   const handleOpenCalendly = (packageInfo = '') => {
+    trackEvent('open_calendly', { package: packageInfo || 'allgemein' });
     setSelectedPackageInfo(packageInfo);
     setIsCalendlyOpen(true);
   };
