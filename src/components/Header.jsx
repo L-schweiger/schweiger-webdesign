@@ -5,6 +5,7 @@ export default function Header({ onOpenCalendly }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { label: "Ergebnisse", href: "#ergebnisse" },
     { label: "Unser Angebot", href: "#pakete" },
     { label: "Zusatzleistungen", href: "#zusatzleistungen" },
     { label: "Vorteile", href: "#vorteile" },

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HeroSection from './components/HeroSection';
+import ResultsSection from './components/ResultsSection';
 import PricingTable from './components/PricingTable';
 import UpsellCards from './components/UpsellCards';
 import VorteileSection from './components/VorteileSection';
@@ -73,7 +74,10 @@ export default function App() {
         {/* 1. Hero Section mit Schreibtisch-Foto, Bleistift-Skizzen, Laptop & Kaffee */}
         <HeroSection onOpenCalendly={handleOpenCalendly} />
 
-        {/* 2. Die Pakete direkt unter der Hero Section (Starter One-Pager ab 690 € & Business-Paket) */}
+        {/* 2. Echte Ergebnisse: 3 Projekte im MacBook & iPhone Mockup */}
+        <ResultsSection onOpenCalendly={handleOpenCalendly} />
+
+        {/* 3. Die Pakete (Starter One-Pager ab 690 € & Business-Paket) */}
         <PricingTable onOpenCalendly={handleOpenCalendly} />
 
         {/* 3. Die Zusatzleistungen (Texte & Bilder, Local SEO, Wartung) */}

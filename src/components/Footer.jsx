@@ -21,6 +21,10 @@ export default function Footer({ onOpenCalendly }) {
 
         {/* Links */}
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-slate-600">
+          <a href="/#ergebnisse" className="hover:text-brand-600 transition-colors">
+            Ergebnisse
+          </a>
+          <span>•</span>
           <a href="/#pakete" className="hover:text-brand-600 transition-colors">
             Unser Angebot
           </a>
