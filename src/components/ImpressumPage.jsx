@@ -93,6 +93,16 @@ export default function ImpressumPage() {
           </p>
         </section>
 
+        <section className="space-y-2 pt-4 border-t border-slate-200 text-xs text-slate-600 leading-normal">
+          <h2 className="font-semibold text-slate-900 text-sm">Datenschutz &amp; Webanalyse</h2>
+          <p>
+            Zur Optimierung der Benutzerfreundlichkeit und Fehleranalyse nutzen wir PostHog (gehostet in der Europäischen Union auf eu.posthog.com). Dabei können anonymisierte Nutzungsdaten sowie Interaktions-Replays (Session Replays) erfasst werden.
+          </p>
+          <p>
+            Sämtliche Tastatureingaben in Eingabefeldern und Formularen werden durch automatische Maskierung geschützt, sodass keine Passwörter oder vertrauliche Eingaben aufgezeichnet werden. Rechtsgrundlage ist unser berechtigtes Interesse an der technischen Fehlerbehebung und bedarfsgerechten Gestaltung unseres Webauftritts gemäß Art. 6 Abs. 1 lit. f DSGVO.
+          </p>
+        </section>
+
         <div className="pt-8">
           <a
             href="/"

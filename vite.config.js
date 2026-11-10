@@ -20,4 +20,13 @@ export default defineConfig({
     },
   ],
   base: '/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'posthog-vendor': ['posthog-js', '@posthog/react'],
+        },
+      },
+    },
+  },
 })
