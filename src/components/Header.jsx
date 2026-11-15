@@ -14,7 +14,7 @@ export default function Header({ onOpenCalendly }) {
 
   return (
     <header className="w-full bg-white/95 md:bg-transparent backdrop-blur-xs md:backdrop-blur-none border-b border-slate-200/60 md:border-transparent transition-all z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
 
         {/* Brand / Logo */}
         <a href="#" className="flex flex-col group">
