@@ -116,7 +116,7 @@ export default function HeroSection({ onOpenCalendly }) {
               </a>
 
               <a
-                href="https://wa.me/436644356834?text=Hallo%20Lukas,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website."
+                href="https://wa.me/436644356834?text=Hallo%20Herr%20Schweiger,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('click_whatsapp', { source: 'hero' })}
